@@ -1,7 +1,11 @@
 [package]
 name = "bcbypass"
+readme = "README.md"
 version = "1.0.0"
 edition = "2018"
 license = "BSD-3-Clause"
 authors = ["Avery R. <contact@nekodjin.xyz>"]
+homepage = "https://github.com/nekodjin/bcbypass/"
+repository = "https://github.com/nekodjin/bcbypass/"
+description = "Borrow Checker Bypass Utility"
 
