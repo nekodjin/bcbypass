@@ -1,3 +1,10 @@
+//! BC Bypass
+//!
+//! This crate expedites the mechanisms through which Rust's borrow checker can
+//! be bypassed. It provides simple functions which enable the creation of both
+//! mutable and immutable references to a value which has already been borrowed
+//! mutably.
+
 pub mod unrestricted;
 
 /// Duplicate Mutable Reference
