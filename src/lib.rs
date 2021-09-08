@@ -7,7 +7,7 @@
 
 pub mod unrestricted;
 
-/// Duplicate Mutable Reference
+/// Duplicate Reference as Mutable
 ///
 /// This function returns a mutable reference to the value behind another
 /// reference, mutable or immutable.
@@ -16,7 +16,7 @@ pub unsafe fn dup_mut<'a, T>(brw: &T) -> &'a mut T {
     &mut *(tmp as *mut T)
 }
 
-/// Duplicate Immutable Reference
+/// Duplicate Reference as Immutable
 ///
 /// This function returns an immutable reference to the value behind another
 /// reference, mutable or immutable.
