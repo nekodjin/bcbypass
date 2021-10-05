@@ -8,7 +8,7 @@
 ///
 /// This function creates a mutable reference to the value behind another
 /// reference, mutable or immutable.
-pub fn dup_mut<'a, T? Sized>(brw: &T) -> &'a mut T {
+pub fn dup_mut<'a, T: ?Sized>(brw: &T) -> &'a mut T {
     let tmp: *const T = brw;
     unsafe { &mut *(tmp as *mut T) }
 }
@@ -17,7 +17,7 @@ pub fn dup_mut<'a, T? Sized>(brw: &T) -> &'a mut T {
 ///
 /// This function creates an immutable reference to the value behind another
 /// reference, mutable or immutable.
-pub fn dup_imm<'a, T? Sized>(brw: &T) -> &'a T {
+pub fn dup_imm<'a, T: ?Sized>(brw: &T) -> &'a T {
     let tmp: *const T = brw;
     unsafe { &*tmp }
 }
